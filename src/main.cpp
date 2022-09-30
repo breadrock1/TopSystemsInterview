@@ -1,3 +1,14 @@
+/**
+ * @mainpage TopSystems Interview project Documentation.
+ * @section intro_sec Introduction
+ * So, there is simple project to demonstrate my C/C++ skills while processing interview.
+ * There is no clear code because i was writing it for about a one hour. I just wanna save
+ * it here to dilute program languages statistic of my account.
+ *
+ * @section install_sec Installation
+ * Just buid CMakeList.txt file.
+ */
+
 #include <QApplication>
 
 #include "ui/mainwindow.h"
