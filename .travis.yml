@@ -1,0 +1,29 @@
+matrix:
+  fast_finish: true
+  include:
+  - name: Ubuntu Build
+    os: linux
+    dist: bionic
+    group: stable
+    services:
+        - xvfb
+    compiler: gcc
+    addons:
+      apt:
+        sources:
+        - ubuntu-toolchain-r-test
+        - sourceline: 'ppa:beineri/opt-qt-5.14.2-bionic'
+        update: true
+        packages:
+        - wget 
+        - build-essential
+        - cmake
+        - libssl-dev 
+        - libicu-dev
+        - qt6-base-dev      
+        - mesa-common-dev
+    script:
+        - mkdir ./build
+        - cd ./build
+        - cmake -DCMAKE_BUILD_TYPE=RELEASE ../
+        - make -j 9
